@@ -1,13 +1,13 @@
 import {act, useEffect, useReducer} from "react";
-import Header from "./Header";
-import Main from "./Main";
-import Loader from "./Loader";
-import Error from "./Error";
-import StartScreen from "./StartScreen";
-import Question from "./Question";
-import NextButton from "./NextButton";
-import Finished from "./Finished";
-import Progress from "./Progress";
+import Header from "../Header";
+import Main from "../Main";
+import Loader from "../Loader";
+import Error from "../Error";
+import StartScreen from "../StartScreen";
+import Question from "../Question";
+import NextButton from "../NextButton";
+import Finished from "../Finished";
+import Progress from "../Progress";
 const intitialState = {
     questions: [],
     status: "loading",
