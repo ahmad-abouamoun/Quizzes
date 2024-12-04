@@ -5,6 +5,6 @@ import {useState} from "react";
 import {useQuiz} from "./context/QuizContext";
 
 export default function App() {
-    const {quiz, setQuiz} = useQuiz();
+    const {quiz} = useQuiz();
     return <div>{quiz ? <ReactQuiz /> : <AllQuizzes />}</div>;
 }
