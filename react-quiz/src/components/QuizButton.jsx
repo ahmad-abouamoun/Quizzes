@@ -7,7 +7,7 @@ const QuizButton = ({data}) => {
             <button
                 className="btn"
                 onClick={() => {
-                    setQuiz("react");
+                    setQuiz(data);
                 }}
             >
                 {data} Quiz
