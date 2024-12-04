@@ -18,7 +18,9 @@
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "server": "json-server --watch data/questions.json --port 8000"
+        "react_quiz": "json-server --watch data/react.json --port 8000",
+        "laravel_quiz": "json-server --watch data/laravel.json --port 8001",
+        "nodejs_quiz": "json-server --watch data/nodejs.json --port 8002"
     },
     "eslintConfig": {
         "extends": [

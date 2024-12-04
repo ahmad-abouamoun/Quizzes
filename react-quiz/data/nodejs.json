@@ -1,0 +1,139 @@
+{
+    "questions": [
+        {
+            "question": "What is Node.js?",
+            "options": [
+                "A JavaScript runtime built on Chrome's V8 engine",
+                "A front-end framework for building SPAs",
+                "A database management system",
+                "A compiler for JavaScript code"
+            ],
+            "correctOption": 0,
+            "points": 10
+        },
+        {
+            "question": "Which module is used to create a server in Node.js?",
+            "options": ["fs", "http", "events", "net"],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "question": "How do you install a Node.js module?",
+            "options": [
+                "node install <module-name>",
+                "npm install <module-name>",
+                "npx install <module-name>",
+                "node module add <module-name>"
+            ],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "question": "What is the default package manager for Node.js?",
+            "options": ["Yarn", "NPM", "Bower", "Webpack"],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "question": "Which global object is used to handle asynchronous events in Node.js?",
+            "options": ["process", "global", "EventEmitter", "stream"],
+            "correctOption": 2,
+            "points": 10
+        },
+        {
+            "question": "How do you export a function from a Node.js module?",
+            "options": [
+                "global.exports = <function>",
+                "module.exports = <function>",
+                "exports.function = <function>",
+                "require.exports = <function>"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "question": "What does the `fs` module in Node.js do?",
+            "options": [
+                "Handles file system operations",
+                "Creates HTTP servers",
+                "Handles database queries",
+                "Manages streams and buffers"
+            ],
+            "correctOption": 0,
+            "points": 10
+        },
+        {
+            "question": "Which method is used to read a file synchronously in Node.js?",
+            "options": ["fs.readFile", "fs.readFileSync", "fs.syncReadFile", "fs.readFileAsync"],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "question": "Which command is used to initialize a new Node.js project?",
+            "options": ["npm create", "npm start", "npm init", "node init"],
+            "correctOption": 2,
+            "points": 10
+        },
+        {
+            "question": "How do you import a module in Node.js?",
+            "options": [
+                "import module from '<module-name>'",
+                "require('<module-name>')",
+                "module('<module-name>')",
+                "include('<module-name>')"
+            ],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "question": "What is the purpose of the `process` object in Node.js?",
+            "options": [
+                "To manage asynchronous operations",
+                "To provide information and control over the current Node.js process",
+                "To handle HTTP requests and responses",
+                "To create and manage child processes"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "question": "Which statement best describes non-blocking I/O in Node.js?",
+            "options": [
+                "Code execution waits for I/O operations to complete",
+                "I/O operations run asynchronously without blocking the execution of other code",
+                "I/O operations are prioritized over other tasks",
+                "Node.js doesn't support non-blocking I/O"
+            ],
+            "correctOption": 1,
+            "points": 30
+        },
+        {
+            "question": "What does the `cluster` module do in Node.js?",
+            "options": [
+                "Manages multiple database connections",
+                "Enables running multiple Node.js instances to handle concurrent requests",
+                "Handles inter-process communication",
+                "Manages stream pipelines"
+            ],
+            "correctOption": 1,
+            "points": 30
+        },
+        {
+            "question": "Which method is used to handle promises in Node.js?",
+            "options": ["Promise.then()", "Promise.await()", "Promise.handle()", "Promise.execute()"],
+            "correctOption": 0,
+            "points": 10
+        },
+        {
+            "question": "What does the `require` function return?",
+            "options": [
+                "The source code of the module",
+                "An object representing the module's exported API",
+                "A promise resolving to the module",
+                "A string containing the module's path"
+            ],
+            "correctOption": 1,
+            "points": 20
+        }
+    ]
+}

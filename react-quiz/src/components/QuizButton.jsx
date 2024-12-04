@@ -5,7 +5,7 @@ const QuizButton = ({data}) => {
     return (
         <div>
             <button
-                className="btn "
+                className="btn"
                 onClick={() => {
                     setQuiz("react");
                 }}

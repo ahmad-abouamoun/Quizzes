@@ -1,0 +1,149 @@
+{
+    "questions": [
+        {
+            "question": "What is Laravel?",
+            "options": [
+                "A front-end JavaScript framework",
+                "A PHP framework for web development",
+                "A database management system",
+                "A Python framework for machine learning"
+            ],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "question": "What is the default database used in Laravel?",
+            "options": ["PostgreSQL", "MySQL", "SQLite", "MariaDB"],
+            "correctOption": 2,
+            "points": 10
+        },
+        {
+            "question": "Which command is used to create a new Laravel project?",
+            "options": ["php artisan new", "composer create-project", "laravel new", "npm create-project"],
+            "correctOption": 2,
+            "points": 10
+        },
+        {
+            "question": "What is the purpose of the `.env` file in Laravel?",
+            "options": [
+                "To store environment variables",
+                "To set up front-end dependencies",
+                "To list all routes in the application",
+                "To configure CSS and JavaScript files"
+            ],
+            "correctOption": 0,
+            "points": 10
+        },
+        {
+            "question": "Which directory contains the controllers in a Laravel project?",
+            "options": [
+                "/app/Http/Controllers",
+                "/resources/views/controllers",
+                "/public/controllers",
+                "/routes/controllers"
+            ],
+            "correctOption": 0,
+            "points": 10
+        },
+        {
+            "question": "What is Eloquent in Laravel?",
+            "options": [
+                "A templating engine for Laravel",
+                "An ORM (Object-Relational Mapper)",
+                "A middleware for handling authentication",
+                "A library for API requests"
+            ],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "question": "How can you create a new migration in Laravel?",
+            "options": [
+                "php artisan migration:create",
+                "php artisan create:migration",
+                "php artisan make:migration",
+                "php artisan migration:make"
+            ],
+            "correctOption": 2,
+            "points": 20
+        },
+        {
+            "question": "What is the purpose of Laravel's `middleware`?",
+            "options": [
+                "To handle database migrations",
+                "To filter HTTP requests entering the application",
+                "To manage relationships between Eloquent models",
+                "To serve static files to users"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "question": "What command is used to start the development server in Laravel?",
+            "options": ["php artisan server", "php artisan serve", "laravel serve", "php artisan dev:serve"],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "question": "How do you define a route in Laravel?",
+            "options": [
+                "In the /resources/routes.php file",
+                "In the /routes/web.php file",
+                "In the /routes/routes.php file",
+                "In the /config/routes.php file"
+            ],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "question": "Which templating engine does Laravel use?",
+            "options": ["Twig", "Blade", "Handlebars", "Smarty"],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "question": "How do you pass data to a Blade view?",
+            "options": [
+                "Using the `@inject` directive",
+                "Using the `compact` method or an associative array",
+                "Using JavaScript",
+                "Using the `.env` file"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "question": "How can you retrieve the value of an environment variable in Laravel?",
+            "options": [
+                "Using the `Env` facade",
+                "Using the `Config` facade",
+                "Using the `env` helper function",
+                "Using the `.env` global variable"
+            ],
+            "correctOption": 2,
+            "points": 20
+        },
+        {
+            "question": "What does the `php artisan migrate` command do?",
+            "options": [
+                "Creates a new migration file",
+                "Rolls back the last database migration",
+                "Executes pending migrations in the database",
+                "Deletes all migrations in the database"
+            ],
+            "correctOption": 2,
+            "points": 20
+        },
+        {
+            "question": "What is the purpose of Laravel's `Service Providers`?",
+            "options": [
+                "To register services in the container",
+                "To define Blade components",
+                "To set up database migrations",
+                "To configure middleware"
+            ],
+            "correctOption": 0,
+            "points": 30
+        }
+    ]
+}
