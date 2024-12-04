@@ -88,7 +88,7 @@
             "question": "How do you define a route in Laravel?",
             "options": [
                 "In the /resources/routes.php file",
-                "In the /routes/web.php file",
+                "In the /routes/api.php file",
                 "In the /routes/routes.php file",
                 "In the /config/routes.php file"
             ],
