@@ -5,7 +5,7 @@ const AllQuizzes = () => {
         <div>
             <QuizButton data={"React"} />
             <QuizButton data={"Laravel"} />
-            <QuizButton data={"Node JS"} />
+            <QuizButton data={"Node-JS"} />
         </div>
     );
 };
