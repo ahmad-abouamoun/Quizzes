@@ -1,16 +1,11 @@
-import {useNavigate} from "react-router";
+import QuizButton from "../../components/QuizButton";
 
-const AllQuizzes = ({setQuiz}) => {
+const AllQuizzes = () => {
     return (
         <div>
-            <button
-                className="btn "
-                onClick={() => {
-                    setQuiz("react");
-                }}
-            >
-                Hello
-            </button>
+            <QuizButton data={"React"} />
+            <QuizButton data={"Laravel"} />
+            <QuizButton data={"Node JS"} />
         </div>
     );
 };
