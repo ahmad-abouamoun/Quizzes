@@ -7,8 +7,8 @@ export default function App() {
     const [quiz, setQuiz] = useState("");
     return (
         <div>
-            {quiz === "" && <AllQuizzes />}
-            {quiz === "error" && <ReactQuiz />}
+            {quiz === "" && <AllQuizzes setQuiz={setQuiz} />}
+            {quiz === "react" && <ReactQuiz />}
         </div>
     );
 }
