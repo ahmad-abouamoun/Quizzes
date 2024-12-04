@@ -10,7 +10,7 @@ function StartScreen({numQuestions, dispatch}) {
             <button onClick={() => dispatch({type: "start"})} className="btn btn-ui">
                 Let's start
             </button>
-            <button onClick={() => setQuiz("choosing")} className="btn btn-ui">
+            <button onClick={() => setQuiz("")} className="btn btn-ui">
                 Go Back
             </button>
         </div>

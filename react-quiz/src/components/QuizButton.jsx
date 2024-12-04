@@ -1,7 +1,7 @@
 import {useQuiz} from "../context/QuizContext";
 
 const QuizButton = ({data}) => {
-    const {setQuiz} = useQuiz();
+    const {quiz, setQuiz} = useQuiz();
     return (
         <div>
             <button
