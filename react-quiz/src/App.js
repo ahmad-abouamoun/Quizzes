@@ -1,13 +1,14 @@
 import {Route, Router, Routes} from "react-router";
 import ReactQuiz from "./Quizzes/React-Quiz";
+import AllQuizzes from "./Quizzes/AllQuizzes";
+import {useState} from "react";
 
 export default function App() {
+    const [quiz, setQuiz] = useState("");
     return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<ReactQuiz />} />
-                <Route path="/react" element={<ReactQuiz />} />
-            </Routes>
-        </Router>
+        <div>
+            {quiz === "" && <AllQuizzes />}
+            {quiz === "error" && <ReactQuiz />}
+        </div>
     );
 }
