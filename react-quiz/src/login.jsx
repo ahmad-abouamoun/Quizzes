@@ -1,5 +1,5 @@
-import styles from "../styles/auth.module.css";
-import useForm from "../hooks/useForm";
+import styles from "./auth.module.css";
+import useForm from "./hooks/useForm";
 
 const Login = () => {
     const {form, updateForm} = useForm({
