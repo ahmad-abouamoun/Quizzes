@@ -51,4 +51,8 @@ export const createUser = async (req, res) => {
 
 export const Signin = async (req, res) => {
     const {email} = req.body;
+    const user = User.find({email});
+    if (!user) {
+        return res.status(400).json({message: "user does not exist."});
+    }
 };
