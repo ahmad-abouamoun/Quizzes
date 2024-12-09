@@ -1,5 +1,5 @@
 import {User} from "../Models/user.js";
-
+import jwt from "jsonwebtoken";
 export const getUsers = async (req, res) => {
     const id = req.params.id;
     if (!id) {
@@ -14,4 +14,12 @@ export const getUsers = async (req, res) => {
         });
     }
     return res.json(user);
+};
+export const createUser = async (req, res) => {
+    const {name, email, password} = req.body;
+    if (!name || !password || !email) {
+        return res.status(500).send({
+            message: "All feilds are required",
+        });
+    }
 };
