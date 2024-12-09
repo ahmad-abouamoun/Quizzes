@@ -51,8 +51,9 @@ export const createUser = async (req, res) => {
 
 export const Signin = async (req, res) => {
     const {email} = req.body;
-    const user = User.find({email});
+    const user = await User.findOne({email});
     if (!user) {
         return res.status(400).json({message: "user does not exist."});
     }
+    res.status(200).json({message: "use does indeed exists"});
 };
