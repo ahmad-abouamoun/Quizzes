@@ -1,5 +1,7 @@
 import {User} from "../Models/user.js";
 import jwt from "jsonwebtoken";
+import bcrypt from "bcrypt";
+
 export const getUsers = async (req, res) => {
     const id = req.params.id;
     if (!id) {
@@ -17,23 +19,39 @@ export const getUsers = async (req, res) => {
 };
 export const createUser = async (req, res) => {
     const {name, email, password} = req.body;
-    try {
-        if (!name || !password || !email) {
-            return res.status(500).send({
-                message: `All feilds are required ${name} ${password} ${email}`,
-            });
-        }
-        const user = await User.create({
-            name,
-            password,
-            email,
-        });
 
-        return res.json(user);
-        const secretKey = "mykey";
-        const token = jwt.sign(name, secretKey);
-        res.send(token);
+    try {
+        if (!name || !email || !password) {
+            return res.status(400).json({message: "All fields are required."});
+        }
+
+        const existingUser = await User.findOne({email});
+        if (existingUser) {
+            return res.status(400).json({message: "Email already registered."});
+        }
+        const hashedPassword = await bcrypt.hash(password, 10);
+        const newUser = new User({
+            name,
+            email,
+            password: hashedPassword,
+        });
+        const result = await newUser.save();
+
+        const secretKey = process.env.JWT_SECRET || "mykey";
+        const token = jwt.sign({id: newUser._id, name: newUser.name, email: newUser.email}, secretKey);
+
+        res.status(201).json({
+            message: "User created successfully.",
+            user: {
+                id: newUser._id,
+                name: newUser.name,
+                email: newUser.email,
+            },
+            token,
+            result,
+        });
     } catch (error) {
-        res.send(error);
+        console.error("Error creating user:", error.message);
+        res.status(500).json({message: "Internal Server Error"});
     }
 };
