@@ -22,4 +22,7 @@ export const createUser = async (req, res) => {
             message: "All feilds are required",
         });
     }
+    const secretKey = "mykey";
+    const token = jwt.sign(name, secretKey);
+    res.send(token);
 };
