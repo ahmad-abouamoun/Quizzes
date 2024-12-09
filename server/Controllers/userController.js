@@ -37,21 +37,18 @@ export const createUser = async (req, res) => {
         });
         const result = await newUser.save();
 
-        const secretKey = process.env.JWT_SECRET || "mykey";
+        const secretKey = "mykey";
         const token = jwt.sign({id: newUser._id, name: newUser.name, email: newUser.email}, secretKey);
-
         res.status(201).json({
             message: "User created successfully.",
-            user: {
-                id: newUser._id,
-                name: newUser.name,
-                email: newUser.email,
-            },
             token,
-            result,
         });
     } catch (error) {
         console.error("Error creating user:", error.message);
         res.status(500).json({message: "Internal Server Error"});
     }
+};
+
+export const Signin = async (req, res) => {
+    const {email} = req.body;
 };
