@@ -31,6 +31,7 @@ const Register = () => {
             const data = await response.json();
 
             if (response.ok) {
+                setLogged(true);
             } else {
                 alert(data.message || "Registration failed");
             }

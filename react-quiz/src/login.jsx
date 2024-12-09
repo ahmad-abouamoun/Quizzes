@@ -11,19 +11,24 @@ const Login = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log("fetching didnot happen yet");
 
         const response = await fetch("http://localhost:8080/user/signin", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(form),
+            body: {
+                email: form.email,
+                password: form.password,
+            },
         });
-
+        console.log("fetching happened");
         const data = await response.json();
 
         if (response.ok) {
             localStorage.setItem("token", data.token);
+            setLogged(true);
         } else {
             alert(data.message || "Login failed");
         }
