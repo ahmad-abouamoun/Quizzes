@@ -17,12 +17,23 @@ export const getUsers = async (req, res) => {
 };
 export const createUser = async (req, res) => {
     const {name, email, password} = req.body;
-    if (!name || !password || !email) {
-        return res.status(500).send({
-            message: "All feilds are required",
+    try {
+        if (!name || !password || !email) {
+            return res.status(500).send({
+                message: `All feilds are required ${name} ${password} ${email}`,
+            });
+        }
+        const user = await User.create({
+            name,
+            password,
+            email,
         });
+
+        return res.json(user);
+        const secretKey = "mykey";
+        const token = jwt.sign(name, secretKey);
+        res.send(token);
+    } catch (error) {
+        res.send(error);
     }
-    const secretKey = "mykey";
-    const token = jwt.sign(name, secretKey);
-    res.send(token);
 };
