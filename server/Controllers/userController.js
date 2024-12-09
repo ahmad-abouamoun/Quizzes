@@ -36,6 +36,7 @@ export const createUser = async (req, res) => {
             email,
             password: hashedPassword,
         });
+
         const result = await newUser.save();
 
         const token = jwt.sign({id: newUser._id, name: newUser.name, email: newUser.email}, secretKey);
@@ -50,14 +51,26 @@ export const createUser = async (req, res) => {
 };
 
 export const Signin = async (req, res) => {
-    const {email} = req.body;
+    const {email, password} = req.body;
     const user = await User.findOne({email});
     if (!user) {
         return res.status(400).json({message: "user does not exist."});
     }
-    const token = jwt.sign({id: user._id, name: user.name, email: user.email}, secretKey);
-    res.status(200).json({
-        message: "User indeed exists.",
-        token,
+    bcrypt.compare(password, user.password, (err, result) => {
+        if (err) {
+            console.error("Error comparing passwords:", err);
+            return;
+        }
+        if (result) {
+            const token = jwt.sign({id: user._id, name: user.name, email: user.email}, secretKey);
+            res.status(200).json({
+                message: "User indeed exists.",
+                token,
+            });
+        } else {
+            res.status(400).json({
+                message: "error with authenticating.",
+            });
+        }
     });
 };

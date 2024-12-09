@@ -1,4 +1,3 @@
-import {useNavigate} from "react-router-dom";
 import styles from "../styles/auth.module.css";
 import useForm from "../hooks/useForm";
 
