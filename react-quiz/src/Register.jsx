@@ -1,4 +1,5 @@
 import styles from "./auth.module.css";
+import {useQuiz} from "./context/QuizContext";
 import useForm from "./hooks/useForm";
 
 const Register = () => {
@@ -7,6 +8,7 @@ const Register = () => {
         email: "",
         password: "",
     });
+    const {setLogged, setChange} = useQuiz();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -51,7 +53,7 @@ const Register = () => {
                 <button type="submit">Sign Up</button>
                 <p>
                     Already have an account?
-                    <span className={styles.loginLink} onClick={() => console.log("clicked")}>
+                    <span className={styles.loginLink} onClick={() => setChange(true)}>
                         Log In
                     </span>
                 </p>
